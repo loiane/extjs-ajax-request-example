@@ -1,0 +1,52 @@
+{
+    "name": "ExtJSAjaxRequestExample",
+    "settings": {
+        "cmd": {
+            "license": "gpl",
+            "cmdVersion": "4.0.1.45",
+            "frameworkVersion": "4.2.1.883"
+        },
+        "canvasControls": {
+            "viewportSize": {
+                "name": "Auto Expand",
+                "builtIn": true,
+                "height": null,
+                "width": null
+            }
+        },
+        "urlPrefix": "",
+        "exportPath": "",
+        "spacesToIndent": 4,
+        "sdkPath": "",
+        "lineEnding": "CRLF",
+        "genTimestamps": false,
+        "cacheBust": false,
+        "buildShouldOverwriteIndex": true,
+        "generateArchitectVersion": true
+    },
+    "xdsVersion": "3.0.0",
+    "xdsBuild": 1337,
+    "schemaVersion": 1,
+    "upgradeVersion": 300000000003,
+    "framework": "ext42",
+    "viewOrderMap": {
+        "view": [
+            "7c2ae46c-82d0-45f8-9fa2-dea0a070303b",
+            "3dbe0195-3ec0-42e5-8061-3a79d012aebf",
+            "3bd98881-3bca-464c-9104-bc4900faebce",
+            "cbb85937-bf5e-4e60-aca8-f3c248c294ea"
+        ],
+        "store": [],
+        "controller": [
+            "09ee72af-24ca-4f8b-b42a-67db2e169fe6"
+        ],
+        "model": [],
+        "resource": [
+            "e35e565e-df0f-4032-a7b7-88097f8b7bc9",
+            "77c9daa5-deaa-41c9-af60-cf520a8fff76"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

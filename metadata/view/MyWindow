@@ -1,0 +1,49 @@
+{
+    "type": "Ext.window.Window",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoShow": true,
+        "designer|initialView": true,
+        "designer|userClassName": "MyWindow",
+        "height": 300,
+        "layout": "accordion",
+        "width": 400
+    },
+    "designerId": "7c2ae46c-82d0-45f8-9fa2-dea0a070303b",
+    "cn": [
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "designerId": "9513d566-50c8-4f31-bf17-03949a2bf471",
+            "masterInstanceId": "3dbe0195-3ec0-42e5-8061-3a79d012aebf"
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "designerId": "c8499644-946a-4e70-b412-e60c382ae0cb",
+            "masterInstanceId": "3bd98881-3bca-464c-9104-bc4900faebce"
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "designerId": "440ddc19-2441-46ed-92e7-98b9666f3593",
+            "masterInstanceId": "cbb85937-bf5e-4e60-aca8-f3c248c294ea"
+        }
+    ]
+}

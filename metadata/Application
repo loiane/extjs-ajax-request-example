@@ -1,0 +1,25 @@
+{
+    "type": "Ext.app.Application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "controllers": [
+            "Login"
+        ],
+        "name": "MyApp",
+        "requires": [
+            "Ext.form.Panel",
+            "Ext.layout.container.Accordion"
+        ],
+        "views": [
+            "MyWindow",
+            "LoginIncorrect",
+            "LoginCorrect",
+            "LoginBestPractice"
+        ]
+    },
+    "designerId": "application"
+}

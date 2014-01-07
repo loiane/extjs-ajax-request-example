@@ -1,0 +1,245 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Login"
+    },
+    "designerId": "09ee72af-24ca-4f8b-b42a-67db2e169fe6",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "loginincorrect button#submit",
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onButtonClickIncorrect",
+                "implHandler": [
+                    "var formPanel = button.up('form'),\r",
+                    "    user = formPanel.down('textfield#user').getValue(),\r",
+                    "    pass = formPanel.down('textfield#pass').getValue();\r",
+                    "\r",
+                    "Ext.Ajax.request({\r",
+                    "    url: 'php/login.php',\r",
+                    "    params: {\r",
+                    "        user: user,\r",
+                    "        password: pass\r",
+                    "    },\r",
+                    "    success: function(conn, response, options, eOpts) {\r",
+                    "\r",
+                    "        Ext.Msg.show({\r",
+                    "            title:'Info',\r",
+                    "            msg: 'Login feito com sucesso',\r",
+                    "            icon: Ext.Msg.INFO,\r",
+                    "            buttons: Ext.Msg.OK\r",
+                    "        });\r",
+                    "    },\r",
+                    "    failure: function(conn, response, options, eOpts) {\r",
+                    "\r",
+                    "        Ext.Msg.show({\r",
+                    "            title:'Erro',\r",
+                    "            msg: 'Usuário ou Senha incorretos.',\r",
+                    "            icon: Ext.Msg.ERROR,\r",
+                    "            buttons: Ext.Msg.OK\r",
+                    "        });\r",
+                    "    }\r",
+                    "});"
+                ],
+                "name": "click",
+                "scope": "me"
+            },
+            "designerId": "80f4021e-bdf0-4622-852c-d4de0aa4f3bb"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "logincorrect button#submit",
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onButtonClickCorrect",
+                "implHandler": [
+                    "var formPanel = button.up('form'),\r",
+                    "    user = formPanel.down('textfield#user').getValue(),\r",
+                    "    pass = formPanel.down('textfield#pass').getValue();\r",
+                    "\r",
+                    "Ext.Ajax.request({\r",
+                    "    url: 'php/login.php',\r",
+                    "    params: {\r",
+                    "        user: user,\r",
+                    "        password: pass\r",
+                    "    },\r",
+                    "    success: function(conn, response, options, eOpts) {\r",
+                    "\r",
+                    "        var result = Ext.JSON.decode(conn.responseText, true);\r",
+                    "\r",
+                    "        if (!result){ // caso seja null\r",
+                    "            result = {};\r",
+                    "            result.success = false;\r",
+                    "            result.msg = conn.responseText;\r",
+                    "        }\r",
+                    "\r",
+                    "        if (result.success) {\r",
+                    "\r",
+                    "            Ext.Msg.show({\r",
+                    "                title:'Info',\r",
+                    "                msg: result.msg,\r",
+                    "                icon: Ext.Msg.INFO,\r",
+                    "                buttons: Ext.Msg.OK\r",
+                    "            });\r",
+                    "\r",
+                    "        } else {\r",
+                    "\r",
+                    "            Ext.Msg.show({\r",
+                    "                title:'Erro',\r",
+                    "                msg: result.msg,\r",
+                    "                icon: Ext.Msg.ERROR,\r",
+                    "                buttons: Ext.Msg.OK\r",
+                    "            });\r",
+                    "        }\r",
+                    "    },\r",
+                    "    failure: function(conn, response, options, eOpts) {\r",
+                    "\r",
+                    "        Ext.Msg.show({\r",
+                    "            title:'Erro - Contate Administrador do sistema!',\r",
+                    "            msg: conn.responseText,\r",
+                    "            icon: Ext.Msg.ERROR,\r",
+                    "            buttons: Ext.Msg.OK\r",
+                    "        });\r",
+                    "    }\r",
+                    "});"
+                ],
+                "name": "click",
+                "scope": "me"
+            },
+            "designerId": "ce72df60-e000-48ce-8bd0-b605d97b3387"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "loginbestpractice button#submit",
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onButtonClickBestPractice",
+                "implHandler": [
+                    "var formPanel = button.up('form'),\r",
+                    "    user = formPanel.down('textfield#user').getValue(),\r",
+                    "    pass = formPanel.down('textfield#pass').getValue();\r",
+                    "\r",
+                    "Ext.Ajax.request({\r",
+                    "    url: 'php/login.php',\r",
+                    "    params: {\r",
+                    "        user: user,\r",
+                    "        password: pass\r",
+                    "    },\r",
+                    "    scope: this,\r",
+                    "    success: this.onLoginSucess,\r",
+                    "    failure: this.onLoginFailure\r",
+                    "});"
+                ],
+                "name": "click",
+                "scope": "me"
+            },
+            "designerId": "37a26f82-bf78-4098-9c48-f0ee210bd0d3"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "title",
+                    "msg",
+                    "icon"
+                ],
+                "fn": "showMessage",
+                "implHandler": [
+                    "Ext.Msg.show({\r",
+                    "    title: title,\r",
+                    "    msg: msg,\r",
+                    "    icon: icon,\r",
+                    "    buttons: Ext.Msg.OK\r",
+                    "});"
+                ]
+            },
+            "designerId": "f9b0d9e7-0d02-44da-a659-fb268c115b6b"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "conn",
+                    "response",
+                    "options",
+                    "eOpts"
+                ],
+                "fn": "onLoginSucess",
+                "implHandler": [
+                    "var result = Ext.JSON.decode(conn.responseText, true);\r",
+                    "\r",
+                    "console.log(result);\r",
+                    "\r",
+                    "if (!result){ // caso seja null\r",
+                    "    result = {};\r",
+                    "    result.success = false;\r",
+                    "    result.msg = conn.responseText;\r",
+                    "}\r",
+                    "\r",
+                    "if (result.success) {\r",
+                    "\r",
+                    "    this.showMessage('Info', result.msg, Ext.Msg.INFO);\r",
+                    "\r",
+                    "} else {\r",
+                    "\r",
+                    "    this.showMessage('Erro', result.msg, Ext.Msg.ERROR);\r",
+                    "\r",
+                    "}"
+                ]
+            },
+            "designerId": "c5e1361d-057b-4b04-b58e-c05e77f15969"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "conn",
+                    "response",
+                    "options",
+                    "eOpts"
+                ],
+                "fn": "onLoginFailure",
+                "implHandler": [
+                    "this.showMessage('Erro - Contate Administrador do sistema!', conn.responseText, Ext.Msg.ERROR);"
+                ]
+            },
+            "designerId": "ede26ae8-9706-4e0b-9480-cb453438ae60"
+        }
+    ]
+}

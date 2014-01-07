@@ -1,0 +1,80 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "bodyPadding": 10,
+        "designer|userAlias": "loginincorrect",
+        "designer|userClassName": "LoginIncorrect",
+        "title": "Login Incorrect"
+    },
+    "designerId": "3dbe0195-3ec0-42e5-8061-3a79d012aebf",
+    "cn": [
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "allowBlank": false,
+                "fieldLabel": "User",
+                "itemId": "user",
+                "layout|anchor": "100%"
+            },
+            "designerId": "dbed5340-ffa0-4c2a-a66f-91f3b14f2820"
+        },
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "allowBlank": false,
+                "fieldLabel": "Pass",
+                "inputType": "password",
+                "itemId": "pass",
+                "layout|anchor": "100%"
+            },
+            "designerId": "a0da4131-28cd-43e0-b07b-5d44ad18f471"
+        },
+        {
+            "type": "Ext.toolbar.Toolbar",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "container|pack": "end",
+                "designer|uiInterfaceName": "footer",
+                "dock": "bottom",
+                "ui": "footer"
+            },
+            "designerId": "c7914995-f486-4c13-873f-276261904bf0",
+            "cn": [
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "formBind": true,
+                        "itemId": "submit",
+                        "layout|flex": null,
+                        "text": "Submit"
+                    },
+                    "designerId": "f60dbc24-c086-4c77-bae8-f7b1fa0e1ab2"
+                }
+            ]
+        }
+    ]
+}
